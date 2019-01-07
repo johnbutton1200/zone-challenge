@@ -25,7 +25,7 @@ The following tests are contained in this solution:
 1. **HappyPathTestComplex** - this test should pass
 2. **HappyPathTestComplexFail** - this test will fail in order to demonstrate the information made avialbe for debugging when a test fails
 
-By default, both tests will run headless on a desktop size instance of Chrome. To demonstrate the tests being run on mobile you can comment and uncomment lines 32 and 35 respectively of BaseClasses/BaseClass.cs
+By default, both tests will run headless on a desktop size instance of Chrome. To demonstrate the tests being run on mobile you can comment and uncomment lines 32 and 35 respectively of BaseClasses/BaseClass.cs. Additionally, line 37 can be commented out to disable headless mode.
 
 ![Test configuration](img/testConfig.png?raw=true "Test configuration")
 
