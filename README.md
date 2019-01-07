@@ -40,4 +40,4 @@ By default, both tests will run headless on a desktop size instance of Chrome. T
 ## Technical debt
 - Ability to run on browsers and devices other than Chrome not implemented
 - Further logging could be added for additional information such as JavaScript errors
-- Waits not used because they were unecessary for this happy path on Chrome - these may be required to ensure tests run reliably on other browsers and devices
+- Waits not used because they were unnecessary for this happy path on Chrome - these may be required to ensure tests run reliably on other browsers and devices
