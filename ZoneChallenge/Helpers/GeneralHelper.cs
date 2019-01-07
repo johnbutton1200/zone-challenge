@@ -51,8 +51,7 @@ namespace ZoneChallenge.Helpers
             var viewportWidth = Driver.Manage().Window.Size.Width;
             Log.Info("Viewport width: " + viewportWidth);
             return width < viewportWidth;
-            }
         }
     }
-
 }
+
