@@ -59,7 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClasses\BaseClass.cs" />
+    <Compile Include="BaseClasses\Base.cs" />
     <Compile Include="Helpers\GeneralHelper.cs" />
     <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />

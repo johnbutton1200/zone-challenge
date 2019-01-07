@@ -1,22 +1,22 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using log4net;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.IO;
-using log4net;
 using ZoneChallenge.Helpers;
 
 namespace ZoneChallenge.BaseClasses
 {
     [TestClass]
-    public class BaseClass
+    public class Base
     {
         public static IWebDriver Driver;
 
         // For additional logging with Log4Net
         public static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        protected BaseClass()
+        protected Base()
         {
         }
 
@@ -25,15 +25,16 @@ namespace ZoneChallenge.BaseClasses
         [TestInitialize]
         public void InitialiseBrowser()
         {
+            // Initialises browser and sets Chrome options
             var options = new ChromeOptions();
 
             // Uncomment below for desktop
             options.AddArgument("--window-size=1280,3000");
 
-            // For mobile uncomment next line
+            // Uncomment below for mobile
             // options.EnableMobileEmulation("Nexus 5");
 
-            //options.AddArgument("--headless");
+            options.AddArgument("--headless");
             Driver = new ChromeDriver(options);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(40);
@@ -45,8 +46,6 @@ namespace ZoneChallenge.BaseClasses
         public void TestCleanup()
         {
             ScreenshotOnFailure();
-            //ext.ReportJsErrors();
-            //_driver.Close();
             Driver.Quit();
             Log.Info("Test clean up complete");
         }

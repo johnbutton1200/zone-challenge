@@ -4,7 +4,7 @@ using ZoneChallenge.BaseClasses;
 
 namespace ZoneChallenge.Helpers
 {
-    public class FormHelper : BaseClass
+    public class FormHelper : Base
     {
         // For additional logging with Log4Net
 

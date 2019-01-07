@@ -4,7 +4,7 @@ using ZoneChallenge.BaseClasses;
 
 namespace ZoneChallenge.Helpers
 {
-    public class GeneralHelper : BaseClass
+    public class GeneralHelper : Base
     {
         public static string GetTimeStamp(DateTime value, string format)
         {

@@ -4,7 +4,7 @@ using ZoneChallenge.BaseClasses;
 
 namespace ZoneChallenge.Helpers
 {
-    public class NavigationHelper : BaseClass
+    public class NavigationHelper : Base
     {
         public NavigationHelper(IWebDriver driver)
         {

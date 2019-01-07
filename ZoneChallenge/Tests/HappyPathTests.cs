@@ -6,7 +6,7 @@ using ZoneChallenge.PageObjects;
 namespace ZoneChallenge.Tests
 {
     [TestClass]
-    public class HappyPathTests : BaseClass
+    public class HappyPathTests : Base
     {
         [TestMethod]
         public void HappyPathComplex()
