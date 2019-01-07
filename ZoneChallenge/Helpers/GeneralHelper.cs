@@ -45,14 +45,6 @@ namespace ZoneChallenge.Helpers
             return emailAddress;
         }
 
-        public static Size GetViewportSize()
-        {
-            // returns browser size
-            var size = Driver.Manage().Window.Size;
-            Log.Info("Viewport size: " + size);
-            return size;
-        }
-
         public static bool ViewportWidthLessThan(int width)
         {
             // returns browser size
