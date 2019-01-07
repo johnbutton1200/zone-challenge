@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using OpenQA.Selenium;
 using ZoneChallenge.BaseClasses;
 
@@ -28,9 +29,9 @@ namespace ZoneChallenge.Helpers
                 Log.Info("Checking for the element: " + element);
                 return element.Displayed.Equals(true);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Log.Error("Element not present: " + element);
+                Log.Error("Could not locate element: " + element + "\nException: " + e);
                 return false;
             }
         }
@@ -44,13 +45,21 @@ namespace ZoneChallenge.Helpers
             return emailAddress;
         }
 
-        public static int GetBrowserWidth()
+        public static Size GetViewportSize()
         {
-            // returns browser width
+            // returns browser size
             var size = Driver.Manage().Window.Size;
-            var width = size.Width;
-            Log.Info("Browser width of: " + width);
-            return width;
+            Log.Info("Viewport size: " + size);
+            return size;
+        }
+
+        public static bool ViewportWidthLessThan(int width)
+        {
+            // returns browser size
+            var viewportWidth = Driver.Manage().Window.Size.Width;
+            Log.Info("Viewport width: " + viewportWidth);
+            return width < viewportWidth;
+            }
         }
     }
 

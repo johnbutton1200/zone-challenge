@@ -26,11 +26,14 @@ namespace ZoneChallenge.BaseClasses
         public void InitialiseBrowser()
         {
             var options = new ChromeOptions();
-            //options.AddArgument("--headless");
-            // options.AddArgument("--window-size=1280,1024");
+
+            // Uncomment below for desktop
+            options.AddArgument("--window-size=1280,3000");
 
             // For mobile uncomment next line
             // options.EnableMobileEmulation("Nexus 5");
+
+            //options.AddArgument("--headless");
             Driver = new ChromeDriver(options);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(40);

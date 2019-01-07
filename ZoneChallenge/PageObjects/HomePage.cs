@@ -24,11 +24,11 @@ namespace ZoneChallenge.PageObjects
         public void ClickQuickView()
         {
             //var isMobile = GeneralHelper.CheckElementPresent(Product1QuickViewMobile);
-            var browserWidth = GeneralHelper.GetBrowserWidth();
-            if (browserWidth < 1200)
+            var isMobileOrTablet = GeneralHelper.ViewportWidthLessThan(1200);
+            if (isMobileOrTablet)
             {
                 NavigationHelper.ClickElement(Product1QuickViewMobile);
-            }            
+            }
             else
             {
                 NavigationHelper.MouseOverElement(Product1Container);
