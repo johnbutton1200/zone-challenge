@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using OpenQA.Selenium;
 using ZoneChallenge.BaseClasses;
 
@@ -50,7 +49,7 @@ namespace ZoneChallenge.Helpers
             // returns browser size
             var viewportWidth = Driver.Manage().Window.Size.Width;
             Log.Info("Viewport width: " + viewportWidth);
-            return width < viewportWidth;
+            return width > viewportWidth;
         }
     }
 }
