@@ -98,26 +98,26 @@ namespace ZoneChallenge.PageObjects
         {
             // Add message
             FormHelper.EnterText(CommentField, "Message value");
-            ConfirmAddressButton.Click(); //update
+            NavigationHelper.ClickElement(ConfirmAddressButton);
         }
 
         public void AgreeToTerms()
         {
             // Agree to terms
             FormHelper.ClickCheckbox(AgreeToTermsCheckBox);
-            ShippingProceedButton.Click(); //update
+            NavigationHelper.ClickElement(ShippingProceedButton);
         }
 
         public void PayByBankWire()
         {
             // Click to pay by wire
-            BankWireLink.Click(); //update
+            NavigationHelper.ClickElement(BankWireLink);
         }
 
         public void ConfirmOrder()
         {
             // Click confirm order button
-            ConfirmOrderButton.Click(); //update
+            NavigationHelper.ClickElement(ConfirmOrderButton);
         }
 
         public void VerifyOrderConfirmation()
