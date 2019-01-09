@@ -1,5 +1,5 @@
 # Zone Challenge
-My approach for this challenge was to demonstrate how I would create a scalable and maintainable test automation framework using best practices. I chose the complex happy path route and the test has been designed to complete the path successfully on desktop and mobile devices. Considering the scope of this challenge and for simplicity, I chose to only run the tests in Chrome Driver. For a full test framework I would add the ability to switch to use other browsers as running on a cloud-based service such as Browserstack.
+My approach for this challenge was to demonstrate how I would create a scalable and maintainable test automation framework using best practices. I chose the complex happy path route and the test has been designed to complete the path successfully on desktop and mobile devices. Considering the scope of this challenge and for simplicity, I chose to only run the tests in Chrome Driver. For a full test framework I would add the ability to switch to use other browsers in addition to running on a cloud-based service such as Browserstack.
 
 ## Prerequisites
 - Visual Studio 2017 (Windows)
@@ -40,4 +40,4 @@ By default, both tests will run headless on a desktop size instance of Chrome. T
 ## Technical debt
 - Ability to run on browsers and devices other than Chrome not implemented
 - Further logging could be added for additional information such as JavaScript errors
-- Waits not used because they were unecessary for this happy path on Chrome - these may be required to ensure tests run reliably on other browsers and devices
+- Waits not used because they were unnecessary for this happy path on Chrome - these may be required to ensure tests run reliably on other browsers and devices
